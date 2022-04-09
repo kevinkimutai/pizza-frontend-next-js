@@ -1,0 +1,86 @@
+.container {
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 4rem;
+}
+.imageContainer {
+  position: relative;
+  flex: 40%;
+  margin: 2rem;
+}
+.pizzaDetails {
+  flex: 60%;
+  padding: 3rem;
+}
+.pizzaDetails h1 {
+  text-transform: uppercase;
+  color: var(--complementary-color-dark);
+  margin-bottom: 0.5rem;
+}
+.currency {
+  font-weight: 600;
+}
+.price {
+  font-size: 2rem;
+  color: var(--secondary-color-dark);
+}
+.desc {
+  margin: 2rem 0;
+}
+.pizzaHeader {
+  color: var(--secondary-color-dark);
+  margin-bottom: 1rem;
+}
+.pizzaImage {
+  display: flex;
+  flex: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+.pizzaWrapper {
+  cursor: pointer;
+}
+.pizzaSize {
+  color: var(--secondary-color-dark);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+}
+.ingredients {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.checkbox {
+  width: 2rem;
+  height: 2rem;
+}
+
+.quantity {
+  width: 5rem;
+  height: 3rem;
+}
+
+.button {
+  height: 3rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-left: 10px;
+  background-color: var(--secondary-color-dark);
+  color: var(--primary-color);
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}

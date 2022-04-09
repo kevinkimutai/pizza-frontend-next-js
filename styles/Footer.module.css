@@ -1,0 +1,50 @@
+.container {
+  background: var(--secondary-color-dark);
+  display: flex;
+  justify-content: center;
+}
+
+.imgContainer {
+  flex: 30%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.mission {
+  flex: 20%;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3rem;
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  padding: 1rem;
+}
+.restaurants {
+  padding: 1rem;
+  flex: 30%;
+}
+.restaurants h2 {
+  text-transform: uppercase;
+  color: var(--complemenatry-color-light);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.restaurants ul li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.workingHrs {
+  flex: 20%;
+  padding: 1rem;
+}
+.workingHrs h1 {
+  font-weight: 600;
+  color: var(--complemenatry-color-light);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.workday span:first-child {
+  font-weight: 600;
+  font-size: 1.5rem;
+}

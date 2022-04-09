@@ -1,0 +1,45 @@
+.container {
+  height: 5rem;
+  background: var(--secondary-color-light);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbarLinks {
+  list-style: none;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.link span {
+  display: block;
+}
+.logo {
+  text-transform: uppercase;
+  font-style: italic;
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-shadow: 0.5rem 1rem 1.2rem #000;
+}
+.cart {
+  position: relative;
+}
+
+.counter {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #d1411e;
+}

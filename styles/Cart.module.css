@@ -1,0 +1,82 @@
+.container {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 4rem;
+}
+
+.tableContainer {
+  flex: 60%;
+  padding: 2rem;
+  height: fit-content;
+}
+.cartTitle {
+  font-family: var(--heading-font);
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tableHead {
+  text-transform: uppercase;
+}
+.tableHead th,
+.tableData td {
+  border: 1px solid var(--complemenatry-color-light);
+  padding: 0.5rem;
+}
+.imageContainer {
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+}
+
+.totalContainer {
+  flex: 40%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.totalBox {
+  width: 80%;
+  padding: 2rem;
+  background: #000;
+}
+.totalDetails {
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.totalDetails span:first-child {
+  text-transform: capitalize;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+.totalDetails span:last-child {
+  text-transform: capitalize;
+
+  margin-left: 0.5rem;
+  color: var(--secondary-color-light);
+}
+.checkout {
+  background: var(--secondary-color-dark);
+  width: 100%;
+  padding: 0.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 2rem;
+  outline: none;
+  box-shadow: none;
+}

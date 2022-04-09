@@ -1,0 +1,28 @@
+.container {
+  position: relative;
+  width: 22%;
+  padding: 0.5rem;
+  margin: 1rem;
+  border: 0.1rem solid var(--complemenatry-color-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  color: var(--complementary-color-dark);
+  text-align: center;
+  text-transform: capitalize;
+  margin: 1rem 0;
+}
+.price {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color-dark);
+  align-self: flex-start;
+}
+.price span {
+  font-size: 1rem;
+  color: #000;
+  margin-right: 0.2rem;
+}
