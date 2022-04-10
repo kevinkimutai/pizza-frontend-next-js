@@ -7,7 +7,7 @@
 }
 
 .tableContainer {
-  flex: 60%;
+  flex: 50%;
   padding: 2rem;
   height: fit-content;
 }
@@ -39,7 +39,7 @@
 }
 
 .totalContainer {
-  flex: 40%;
+  flex: 50%;
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -71,7 +71,7 @@
 .checkout {
   background: var(--secondary-color-dark);
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.7rem;
   color: var(--primary-color);
   font-weight: bold;
   text-transform: uppercase;
@@ -79,4 +79,14 @@
   margin-top: 2rem;
   outline: none;
   box-shadow: none;
+}
+.paymentCashBtn {
+  width: 100%;
+  padding: 0.7rem;
+  background: var(--complementary-color-dark);
+  color: var(--primary-color);
+  cursor: pointer;
+  border-radius: 0.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }

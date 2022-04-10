@@ -7,12 +7,16 @@ const cartSlice = createSlice({
   reducers: {
     addPizzaToCart(state, action) {
       const { cart } = action.payload;
+      console.log(cart);
+
       state.pizzas.push(cart);
       state.quantity += 1;
-      state.total += action.payload.prices * action.payload.quantity;
+      state.total += cart.prices * cart.quantity;
     },
     removePizzaFromCart(state, action) {},
-    reset() {},
+    reset(state) {
+      state = initialState;
+    },
   },
 });
 

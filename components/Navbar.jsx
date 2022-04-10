@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import Link from "next/link";
 
 import Image from "next/image";
 
@@ -16,10 +17,12 @@ function Navbar() {
         <li className={styles.logo}>pizza kenya</li>
 
         <div className={styles.item}>
-          <div className={styles.cart}>
-            <Image src="/images/cart.png" alt="" width="30px" height="30px" />
-            <div className={styles.counter}>{cartItems}</div>
-          </div>
+          <Link href="/cart">
+            <div className={styles.cart}>
+              <Image src="/images/cart.png" alt="" width="30px" height="30px" />
+              <div className={styles.counter}>{cartItems}</div>
+            </div>
+          </Link>
         </div>
       </ul>
     </div>

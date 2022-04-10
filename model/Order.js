@@ -17,11 +17,11 @@ const OrderSchema = new mongoose.Schema(
       required: true,
     },
     status: {
-      type: Number,
+      type: String,
       default: 0,
     },
     method: {
-      type: Number,
+      type: String,
       required: true,
     },
   },

@@ -9,6 +9,7 @@ import styles from "../../styles/Pizza.module.css";
 export default function Pizza({ pizza }) {
   const [pizzaSizeState, setPizzaSizeState] = useState(0);
   const [pizzaOptions, setPizzaOptions] = useState([]);
+  const [quantity, setQuantity] = useState(0);
 
   const dispatch = useDispatch();
 
@@ -22,11 +23,32 @@ export default function Pizza({ pizza }) {
     }
   };
 
+  const quantityHandler = (e) => {
+    setQuantity(e.target.value);
+  };
+
   const addtoCartHandler = () => {
+    let size;
+    switch (pizzaSizeState) {
+      case 0:
+        size = "small";
+        break;
+
+      case 1:
+        size = "medium";
+        break;
+
+      case 2:
+        size = "large";
+        break;
+    }
+
     const cart = {
       ...pizza,
       prices: pizza.prices[pizzaSizeState],
       extraOptions: pizzaOptions,
+      quantity: +quantity,
+      size,
     };
 
     dispatch(cartSliceActions.addPizzaToCart({ cart }));
@@ -98,7 +120,12 @@ export default function Pizza({ pizza }) {
           ;
         </div>
         <div className={styles.add}>
-          <input type="number" defaultValue={1} className={styles.quantity} />
+          <input
+            type="number"
+            defaultValue={1}
+            className={styles.quantity}
+            onChange={quantityHandler}
+          />
           <button className={styles.button} onClick={addtoCartHandler}>
             Add to Cart
           </button>

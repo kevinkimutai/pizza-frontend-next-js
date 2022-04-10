@@ -2,32 +2,36 @@ import Image from "next/image";
 
 import styles from "../../styles/Order.module.css";
 
-function Order() {
+export default function Order({ order }) {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
         <div className={styles.row}>
           <table className={styles.table}>
-            <tr className={styles.trTitle}>
-              <th>Order ID</th>
-              <th>Customer</th>
-              <th>Address</th>
-              <th>Total</th>
-            </tr>
-            <tr className={styles.tr}>
-              <td>
-                <span className={styles.id}>129837819237</span>
-              </td>
-              <td>
-                <span className={styles.name}>John Doe</span>
-              </td>
-              <td>
-                <span className={styles.address}>Elton st. 212-33 LA</span>
-              </td>
-              <td>
-                <span className={styles.total}>$79.80</span>
-              </td>
-            </tr>
+            <thead>
+              <tr className={styles.trTitle}>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Address</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className={styles.tr}>
+                <td>
+                  <span className={styles.id}>{order._id}</span>
+                </td>
+                <td>
+                  <span className={styles.name}> {order.customer}</span>
+                </td>
+                <td>
+                  <span className={styles.address}>{order.address}</span>
+                </td>
+                <td>
+                  <span className={styles.total}>{order.total}</span>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
         <div className={styles.row}>
@@ -89,13 +93,14 @@ function Order() {
         <div className={styles.wrapper}>
           <h2 className={styles.title}>CART TOTAL</h2>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Subtotal:</b>$79.60
+            <b className={styles.totalTextTitle}>Subtotal:</b>
+            {order.total}
           </div>
           <div className={styles.totalText}>
             <b className={styles.totalTextTitle}>Discount:</b>$0.00
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Total:</b>$79.60
+            <b className={styles.totalTextTitle}>Total:</b>${order.total}
           </div>
           <button disabled className={styles.button}>
             PAID
@@ -106,4 +111,25 @@ function Order() {
   );
 }
 
-export default Order;
+export const getServerSideProps = async (ctx) => {
+  const { orderId } = ctx.params;
+
+  const res = await fetch(`http://localhost:3000/api/order/${orderId}`);
+  const data = await res.json();
+
+  return {
+    props: {
+      order: data,
+    },
+  };
+};
+
+// address: "sb-qawca15692828@personal.example.com";
+// createdAt: "2022-04-10T18:35:09.182Z";
+// customer: "John Doe";
+// method: "paypal";
+// status: "0";
+// total: 90;
+// updatedAt: "2022-04-10T18:35:09.182Z";
+// __v: 0;
+// _id: "6253235df5e24359127aa7f9";
