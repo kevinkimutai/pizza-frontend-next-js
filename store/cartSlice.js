@@ -15,7 +15,9 @@ const cartSlice = createSlice({
     },
     removePizzaFromCart(state, action) {},
     reset(state) {
-      state = initialState;
+      state.pizzas = [];
+      state.quantity = 0;
+      state.total = 0;
     },
   },
 });

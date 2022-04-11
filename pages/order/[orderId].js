@@ -124,12 +124,3 @@ export const getServerSideProps = async (ctx) => {
   };
 };
 
-// address: "sb-qawca15692828@personal.example.com";
-// createdAt: "2022-04-10T18:35:09.182Z";
-// customer: "John Doe";
-// method: "paypal";
-// status: "0";
-// total: 90;
-// updatedAt: "2022-04-10T18:35:09.182Z";
-// __v: 0;
-// _id: "6253235df5e24359127aa7f9";

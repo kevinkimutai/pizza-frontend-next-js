@@ -1,0 +1,55 @@
+.container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: rgba(146, 146, 146, 0.726);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  padding: 3rem;
+  background: #ffff;
+  border-radius: 1rem;
+  z-index: 900;
+}
+
+.wrapper h2 {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.item {
+  margin-bottom: 1rem;
+}
+.item label {
+  margin-right: 0.5rem;
+  text-transform: capitalize;
+  color: var(--secondary-color-dark);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.item input,
+.item textarea {
+  width: 100%;
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 1rem 0.5rem;
+  border: 0.1rem solid var(--secondary-color-light);
+}
+.orderBtn {
+  background: var(--complementary-color-dark);
+  width: 10rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

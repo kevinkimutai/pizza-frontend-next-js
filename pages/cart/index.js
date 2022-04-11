@@ -13,6 +13,8 @@ import styles from "../../styles/Cart.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { cartSliceActions } from "../../store/cartSlice";
 
+import OrderModal from "../../components/OrderModal";
+
 function Cart() {
   const cart = useSelector((state) => state.cart);
   const router = useRouter();
@@ -23,6 +25,11 @@ function Cart() {
   const style = { layout: "vertical" };
 
   const [checkoutBtnToggle, setCheckoutBtnToggle] = useState(false);
+  const [openPaymentModal, setOpenPaymentModal] = useState(false);
+
+  const cashPaymentHandler = () => {
+    setOpenPaymentModal(true);
+  };
 
   const fetchOrders = async (payment) => {
     try {
@@ -173,13 +180,20 @@ function Cart() {
                 <ButtonWrapper currency={currency} showSpinner={false} />
               </PayPalScriptProvider>
 
-              <button className={styles.paymentCashBtn}>
+              <button
+                className={styles.paymentCashBtn}
+                onClick={cashPaymentHandler}
+              >
                 CASH ON DELIVERY
               </button>
             </>
           )}
         </div>
       </div>
+
+      {openPaymentModal && (
+        <OrderModal fetchOrders={fetchOrders} total={cart.total} />
+      )}
     </div>
   );
 }
