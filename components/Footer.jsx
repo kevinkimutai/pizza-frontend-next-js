@@ -34,7 +34,7 @@ function Footer() {
           <span>Monday-Friday:</span> <span>8:00 AM - 9:00PM</span>
         </div>
         <div className={styles.workday}>
-          <span>Monday-Friday:</span> <span>8:00 AM - 9:00PM</span>
+          <span>Saturday-Sunday:</span> <span>12:00 pm - 7:00PM</span>
         </div>
       </div>
     </div>

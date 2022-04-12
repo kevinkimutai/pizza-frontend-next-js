@@ -9,12 +9,15 @@ function Navbar() {
   const cartItems = useSelector((state) => state.cart.quantity);
   return (
     <div className={styles.container}>
-      <ul className={styles.navbarLinks}>
-        <li className={styles.link}>
-          <span>CALL NOW</span> <span>07245542542</span>
-        </li>
-
-        <li className={styles.logo}>pizza kenya</li>
+      <div className={styles.navbarLinks}>
+        <div className={styles.link}>
+          <div className={styles.call}>
+            <span>CALL NOW</span> <span>07245542542</span>
+          </div>
+          <Link href="/">
+            <div className={styles.logo}>pizza kenya</div>
+          </Link>
+        </div>
 
         <div className={styles.item}>
           <Link href="/cart">
@@ -24,7 +27,7 @@ function Navbar() {
             </div>
           </Link>
         </div>
-      </ul>
+      </div>
     </div>
   );
 }
