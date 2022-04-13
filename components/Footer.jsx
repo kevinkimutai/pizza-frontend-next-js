@@ -6,11 +6,7 @@ function Footer() {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-        <Image
-          src="/images/banner-img-2.jpg"
-          layout="fill"
-          objectFit="contain"
-        />
+        <div className={styles.logo}>pizza kenya</div>
       </div>
       <div className={styles.mission}>finger licking good...</div>
       <div className={styles.restaurants}>

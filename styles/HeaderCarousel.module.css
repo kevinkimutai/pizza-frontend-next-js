@@ -14,9 +14,22 @@
   transform: translate(-50%, -50%);
   color: var(--primary-color);
 }
-
+@media (max-width: 720px) {
+  .banner {
+    left: 35%;
+  }
+}
 .bannerHeading {
   font-size: 4.5rem;
   margin-bottom: 2rem;
   font-family: var(--heading-font);
+}
+
+@media (max-width: 980px) {
+  .container {
+    height: calc(50vh - 5rem);
+  }
+  .wrapper {
+    height: calc(50vh - 5rem);
+  }
 }

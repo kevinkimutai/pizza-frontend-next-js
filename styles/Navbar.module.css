@@ -17,7 +17,7 @@
   display: block;
 }
 .call {
-  margin-right: 1rem;
+  margin: 0 1.5rem;
 }
 .call span {
   font-weight: 400;

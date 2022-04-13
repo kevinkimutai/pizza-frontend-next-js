@@ -11,6 +11,7 @@ function Navbar() {
     <div className={styles.container}>
       <div className={styles.navbarLinks}>
         <div className={styles.link}>
+          <Image src="/images/telephone.png" width="30" height="30" />
           <div className={styles.call}>
             <span>CALL NOW</span> <span>07245542542</span>
           </div>

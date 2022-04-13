@@ -6,9 +6,21 @@
 
 .imgContainer {
   flex: 30%;
-  height: 100%;
-  width: 100%;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  text-transform: uppercase;
+  font-style: italic;
+  font-family: var(--heading-font);
+  font-size: 4.5rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  -webkit-text-stroke: 0.05rem var(--secondary-color-light);
+  text-decoration: underline;
+  text-align: center;
 }
 .mission {
   flex: 20%;
@@ -38,6 +50,7 @@
 .restaurants ul li {
   margin-bottom: 1rem;
   font-size: 1.2rem;
+  color: var(--complementary-color-dark);
 }
 .workingHrs {
   flex: 20%;
@@ -58,4 +71,27 @@
   font-weight: 600;
   font-size: 1.5rem;
   color: var(--primary-color);
+}
+
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+  .imgContainer {
+    display: none;
+  }
+  .mission {
+    font-size: 4.5rem;
+  }
+
+  .workingHrs h1,
+  .restaurants h2 {
+    font-size: 3rem;
+  }
+  .restaurants ul li {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
 }

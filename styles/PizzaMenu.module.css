@@ -1,7 +1,15 @@
 .container {
   width: 90vw;
   padding: 2rem;
+  flex-direction: column;
   margin: auto;
+}
+
+@media (max-width: 110em) {
+  .container {
+    width: 95vw;
+    padding: 1rem;
+  }
 }
 .header {
   font-family: var(--heading-font);
@@ -14,6 +22,6 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-self: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
